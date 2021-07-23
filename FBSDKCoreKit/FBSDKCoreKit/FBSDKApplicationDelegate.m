@@ -229,7 +229,7 @@ static UIApplicationState _applicationState;
 
 #endif
 
-- (void)initializeSDKWithLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions
+- (void)initializeSDKWithLaunchOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   if (hasInitializeBeenCalled) {
     // Do nothing if initialized already
@@ -578,7 +578,7 @@ static UIApplicationState _applicationState;
   return hasInitializeBeenCalled;
 }
 
-- (void)configureDependencies
+- (void)configureDependencies NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   id<FBSDKGraphRequestProviding> graphRequestProvider = [FBSDKGraphRequestFactory new];
   id<FBSDKDataPersisting> store = NSUserDefaults.standardUserDefaults;

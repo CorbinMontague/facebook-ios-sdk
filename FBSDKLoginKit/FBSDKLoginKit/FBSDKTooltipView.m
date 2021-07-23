@@ -510,8 +510,8 @@ static CGMutablePathRef _createCloseCrossGlyphWithRect(CGRect rect)
 }
 
  #pragma clang diagnostic push
- #pragma clang diagnostic ignored "-Wdeprecated-declarations"
-- (CGRect)layoutSubviewsAndDetermineFrame
+ #pragma clang diagnostic ignored "-Wdeprecated-declarations"z
+- (CGRect)layoutSubviewsAndDetermineFrame NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   // Compute the positioning of the arrow.
   CGRect screenBounds = [UIScreen mainScreen].bounds;

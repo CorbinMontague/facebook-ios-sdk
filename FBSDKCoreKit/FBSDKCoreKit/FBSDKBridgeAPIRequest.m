@@ -138,7 +138,7 @@ NSString *const FBSDKBridgeAPIVersionKey = @"version";
   return self;
 }
 
-+ (id<FBSDKBridgeAPIProtocol>)_protocolForType:(FBSDKBridgeAPIProtocolType)type scheme:(NSString *)scheme
++ (id<FBSDKBridgeAPIProtocol>)_protocolForType:(FBSDKBridgeAPIProtocolType)type scheme:(NSString *)scheme NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   id<FBSDKBridgeAPIProtocol> protocol = [self protocolMap][@(type)][scheme];
   if (type == FBSDKBridgeAPIProtocolTypeWeb) {

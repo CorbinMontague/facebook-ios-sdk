@@ -294,7 +294,7 @@ static FBSDKWebDialog *g_currentDialog = nil;
     return YES;
 }
 
-- (CGRect)_applicationFrameForOrientation
+- (CGRect)_applicationFrameForOrientation NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   CGRect applicationFrame = _dialogView.window.screen.bounds;
 

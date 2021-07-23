@@ -1345,7 +1345,7 @@ static id<FBSDKAppEventsParameterProcessing, FBSDKEventsProcessing> g_restrictiv
               valueToSum:(NSNumber *)valueToSum
               parameters:(NSDictionary *)parameters
       isImplicitlyLogged:(BOOL)isImplicitlyLogged
-             accessToken:(FBSDKAccessToken *)accessToken
+             accessToken:(FBSDKAccessToken *)accessToken NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   [self validateConfiguration];
 

@@ -78,7 +78,7 @@ static dispatch_once_t token;
              graphRequestProvider:(id<FBSDKGraphRequestProviding>)graphRequestProvider
                       eventLogger:(id<FBSDKEventLogging>)eventLogger
              notificationObserver:(id<FBSDKNotificationObserving>)notificationObserver
-                      tokenWallet:(Class<FBSDKAccessTokenProviding>)tokenWallet
+                      tokenWallet:(Class<FBSDKAccessTokenProviding>)tokenWallet NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   if ((self = [super init])) {
     _eventName = [eventName copy];

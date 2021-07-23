@@ -243,12 +243,12 @@ static id<FBSDKSettings> _settings;
   return request;
 }
 
-+ (BOOL)_codelessSetupTimestampIsValid:(NSDate *)timestamp
++ (BOOL)_codelessSetupTimestampIsValid:(NSDate *)timestamp NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   return (timestamp != nil && [[NSDate date] timeIntervalSinceDate:timestamp] < CODELESS_SETTING_CACHE_TIMEOUT);
 }
 
-+ (void)setupGesture
++ (void)setupGesture NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   _isGestureSet = YES;
   [UIApplication sharedApplication].applicationSupportsShakeToEdit = YES;
@@ -341,7 +341,7 @@ static id<FBSDKSettings> _settings;
   return extinfo ?: @"";
 }
 
-+ (void)startIndexing
++ (void)startIndexing NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   if (!_isCodelessIndexingEnabled) {
     return;
@@ -419,7 +419,7 @@ static id<FBSDKSettings> _settings;
   }];
 }
 
-+ (NSString *)currentViewTree
++ (NSString *)currentViewTree NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   NSMutableArray *trees = [NSMutableArray array];
 

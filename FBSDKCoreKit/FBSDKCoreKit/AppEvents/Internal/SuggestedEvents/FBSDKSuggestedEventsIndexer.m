@@ -181,7 +181,7 @@ static dispatch_once_t setupNonce;
   });
 }
 
-- (void)rematchBindings
+- (void)rematchBindings NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   NSArray *windows = [UIApplication sharedApplication].windows;
   for (UIWindow *window in windows) {
@@ -249,7 +249,7 @@ static dispatch_once_t setupNonce;
   }
 }
 
-- (void)predictEventWithUIResponder:(UIResponder *)uiResponder text:(NSString *)text
+- (void)predictEventWithUIResponder:(UIResponder *)uiResponder text:(NSString *)text NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   if (text.length > 100 || text.length == 0 || [FBSDKAppEventsUtility isSensitiveUserData:text]) {
     return;

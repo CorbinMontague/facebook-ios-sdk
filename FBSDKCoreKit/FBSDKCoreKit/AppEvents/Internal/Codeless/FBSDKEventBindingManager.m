@@ -206,7 +206,7 @@
                            named:@"handle_collection_view"];
 }
 
-- (void)rematchBindings
+- (void)rematchBindings NS_EXTENSION_UNAVAILABLE("Uses APIs (i.e UIApplication.sharedApplication) not available for use in App Extensions.")
 {
   if (0 == self.eventBindings.count) {
     return;
